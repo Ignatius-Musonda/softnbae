@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .hero {
+    background: url('../Images/img.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  nav {
+    background: #333;
+    padding: 20px 0;
+  }
+  
+  nav .nav-left {
+    float: left;
+  }
+  
+  nav .nav-left span {
+    margin-right: 20px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  nav .nav-right {
+    float: right;
+  }
+  
+  nav .nav-right span {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  nav .nav-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    nav .nav-left,
+    nav .nav-right {
+      display: none;
+    }
+  
+    nav .nav-toggle {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+  
+    nav .nav-toggle .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+    }
+  
+    nav ul {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #333;
+      text-align: center;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .nav-open ul {
+      display: block;
+    }
+  }
+  
