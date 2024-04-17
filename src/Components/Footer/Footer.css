@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    /* background-color: red; */
+}
+
+.text-link{
+    text-decoration: none;
+    color: initial;
+    /* background-color: red; */
+}
+
+.FooterCover{
+    padding: 0 30px;
+    background-color: transparent;
+    /* cursor: pointer; */
+    transition: background-color 0.5s ease; /* add a transition effect */
+    /* background-color: red; */
+}
+/* .FooterInCover{
+    margin-top: 44px;
+    background-color: red;
+} */
+.FooterCover:hover{
+    background-color: rgba(255, 255, 255, 0.573); /* set the semi-transparent white background color on hover */
+ 
+}
+
+.iconRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.5px solid;
+}
+.iconRow .fontawesomIcons{
+  padding-right: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color .3s all;
+}
+.iconRow .fontawesomIcons:hover{
+  color: gray;
+}
+
+.DevRowPart{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.DevRowPart p{
+    margin: 0;
+    padding: 0 5px;
+
+}
+.DevRowPart u{
+   cursor: pointer;
+
+}
+
+@media screen and (max-width: 730px){   
+
+    .iconRow{
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 0.5px solid;
+    }
+
+    .rowPart{
+        text-align: center;
+    }
+    .rowPart .Footericons{
+        display: flex;
+        align-items: center;
+    }
+
+    .devRow{
+        display: flex;
+        justify-content: space-around;
+
+     
+        
+    }
+  
+
+    
+    
+}
