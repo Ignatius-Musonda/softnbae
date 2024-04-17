@@ -50,7 +50,7 @@ function App() {
                      
             </div>
         </div>
-        <h2>RSVP</h2>
+        <button>CHECK RESERVATION</button>
         <p>RSVP section goes here.</p>
       </section>
 
