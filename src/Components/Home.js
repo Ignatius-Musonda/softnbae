@@ -4,6 +4,7 @@ import Footer from './Footer/Footer';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [viz,setViz] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -50,7 +51,35 @@ function App() {
                      
             </div>
         </div>
-        <button>CHECK RESERVATION</button>
+
+        <div className='rescheckBtn'>
+             <button className='rescheck'>CHECK RESERVATION</button>
+        </div>
+
+        <div className='resInputs'>
+
+          <div className='resInputsSec'>
+
+         
+              <div className='actualinputs'>
+              <input placeholder='hrere'/> 
+              </div>
+              <div className='actualinputs'>
+              <input placeholder='hrere'/> 
+              </div>
+              <div className='CTA'>
+                      <button>Search</button>
+              </div>
+              </div>
+        </div>
+
+       
+       
+
+        
+
+
+
         <p>RSVP section goes here.</p>
       </section>
 

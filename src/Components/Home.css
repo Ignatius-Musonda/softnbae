@@ -24,6 +24,42 @@ body {
     background: #333;
     padding: 20px 0;
   }
+
+  .rescheckBtn  button {
+    border: none;
+    padding: 20px 60px;
+    background-color: green;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+
+  .resInputs{
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  .resInputsSec{
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    column-gap: 5px;
+  }
+  .resInputsSec input{
+    min-width: 300px;
+    padding: 20px 3px;
+    border-radius: 3px;
+  }
+  .resInputsSec:nth-child(1) {
+    background-color: red;
+  }
+  .resInputsSec button{
+    /* min-width: 300px; */
+    padding: 20px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
   
   nav .nav-left {
     float: left;
