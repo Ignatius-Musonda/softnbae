@@ -9,7 +9,7 @@ const useContentful = () => {
   // });
   const client = createClient({
     space: "kp7895evg2nd",
-    accessToken: "UjiwrOgEuaPKH8xHDxXCwcvKdFEIrigyEFDduj2eicM",
+    accessToken: "eieMViKbcQqp9ejVR437kMmqZ7SagfqOOTKWZGfESRs",
     host: "cdn.contentful.com",
     // content_type: "product",
     //eieMViKbcQqp9ejVR437kMmqZ7SagfqOOTKWZGfESRs
@@ -18,7 +18,7 @@ const useContentful = () => {
   const getAuthors = async () => {
     try {
       const entries = await client.getEntries({
-        content_type: "guest",
+        // content_type: "guest",
         // select: "fields"
       });
 
