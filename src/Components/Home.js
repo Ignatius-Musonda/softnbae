@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './Home.css';
 import Footer from './Footer/Footer';
+import useContentful from './Hooks/useContentful';
+
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [viz,setViz] = useState(false);
+  const [cardData, setCardData] = useState()
+
+  const {getAuthors} = useContentful()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -14,6 +19,15 @@ function App() {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
     toggleMenu();
   };
+
+  useEffect(() => {
+    console.log("Hello")
+ 
+    getAuthors().then((response) => response && setCardData(response));
+//   getPosters().then((response) => response && console.log("hero",response));
+},[]);
+
+
 
   return (
     <div className="App">
