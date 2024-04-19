@@ -7,6 +7,7 @@ import useContentful from './Hooks/useContentful';
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [viz,setViz] = useState(false);
+  const [phone,setPhone] = useState();
   const [cardData, setCardData] = useState()
 
   const {getAuthors} = useContentful()
@@ -86,7 +87,9 @@ function App() {
 
 
                             <div className='actualinputs'>
-                            <input placeholder='Phone number'/> 
+                            <input onChange={(e)=>{setPhone(e.target.value)
+                              console.log("phone",phone)
+                            }} value={phone} placeholder='Phone number'/> 
                             </div>
                             <div className='actualinputs'>
                             <input placeholder='RSVP Code'/> 
@@ -97,18 +100,21 @@ function App() {
                 </div>
             </div>
 
-            {cardData && cardData.map((item,index)=>{
-
-                  return(
-                    <>
-                      <div key={index}>
-                        <p>somethings</p>
+            {cardData &&
+                (cardData.filter(item => item.phone == phone).length > 0 ? (
+                  cardData
+                    .filter(item => item.phone == phone)
+                    .map((item, index) => {
+                      return (
+                        <div key={index}>
+                          <p>somethings</p>
                           <p>{item?.name}</p>
-                      </div>
-                    </>
-                  )
-
-            })}
+                        </div>
+                      );
+                    })
+                ) : (
+                  <p>No records found</p>
+                ))}
 
 
         
