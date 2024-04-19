@@ -18,7 +18,7 @@ const useContentful = () => {
   const getAuthors = async () => {
     try {
       const entries = await client.getEntries({
-        // content_type: "guest",
+        content_type: "guest",
         // select: "fields"
       });
 

@@ -23,7 +23,11 @@ function App() {
   useEffect(() => {
     console.log("Hello")
  
-    getAuthors().then((response) => response && setCardData(response));
+    getAuthors().then((response) => response && setCardData(response)
+    
+    
+    );
+    console.log("respng",cardData)
 //   getPosters().then((response) => response && console.log("hero",response));
 },[]);
 
@@ -67,26 +71,50 @@ function App() {
         </div>
 
         <div className='rescheckBtn'>
-             <button className='rescheck'>CHECK RESERVATION</button>
+             <button onClick={()=>{
+              console.log("Been clicked")
+              
+              setViz(!viz)}} className='rescheck'>CHECK RESERVATION</button>
         </div>
+        
+        {viz   && <> 
 
-        <div className='resInputs'>
 
-          <div className='resInputsSec'>
+          <div className='resInputs'>
 
-         
-              <div className='actualinputs'>
-              <input placeholder='hrere'/> 
-              </div>
-              <div className='actualinputs'>
-              <input placeholder='hrere'/> 
-              </div>
-              <div className='CTA'>
-                      <button>Search</button>
-              </div>
-              </div>
-        </div>
+            <div className='resInputsSec'>
 
+
+                            <div className='actualinputs'>
+                            <input placeholder='Phone number'/> 
+                            </div>
+                            <div className='actualinputs'>
+                            <input placeholder='RSVP Code'/> 
+                            </div>
+                            <div className='CTA'>
+                                    <button>Search</button>
+                            </div>
+                </div>
+            </div>
+
+            {cardData && cardData.map((item,index)=>{
+
+                  return(
+                    <>
+                      <div key={index}>
+                        <p>somethings</p>
+                          <p>{item?.name}</p>
+                      </div>
+                    </>
+                  )
+
+            })}
+
+
+        
+           </>
+        }
+       
        
        
 

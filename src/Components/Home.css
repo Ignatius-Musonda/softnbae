@@ -47,18 +47,26 @@ body {
     column-gap: 5px;
   }
   .resInputsSec input{
-    min-width: 300px;
-    padding: 20px 3px;
+    width: 150px;
+    padding: 18px 10px;
     border-radius: 3px;
+    font-size: 18px;
+    /* background-color: red; */
   }
-  .resInputsSec:nth-child(1) {
+  /* .resInputsSec:nth-child(1) {
     background-color: red;
-  }
+  } */
   .resInputsSec button{
     /* min-width: 300px; */
-    padding: 20px 10px;
+    padding: 20px 5px;
     border-radius: 3px;
     cursor: pointer;
+   
+  }
+  .resInputsSec button:hover{
+
+    background-color: black;
+    color: white;
   }
   
   nav .nav-left {
