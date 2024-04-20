@@ -354,7 +354,7 @@ function App() {
                       );
                     })
                 ) : (
-                  <p className='FValue'>{phone.length > 0 ? (searching ? "" : "No reservation found") : ""}</p>
+                  <p className='FValue'>{phone?.length > 0 ? (searching ? "" : "No reservation found") : ""}</p>
 
                 ))}
 
