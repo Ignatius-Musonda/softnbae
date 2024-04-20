@@ -34,6 +34,7 @@ const useContentful = () => {
       return sanitizedEntries;
     } catch (error) {
       console.log(`Error fetching authors ${error}`);
+      //dd
     }
   };
 
