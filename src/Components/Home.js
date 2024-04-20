@@ -100,6 +100,124 @@ function App() {
                 </div>
             </div>
 
+            <div className='wholerescover'> 
+
+                    <div className='resdetails'>
+
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p>Name:</p>
+                                </div>
+                                <div className='Value'>
+                                          <p>Ignatius Musonda</p>
+                                </div>
+                          </div>
+
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p>Reservation status:</p>
+                                </div>
+                                <div className='Value'>
+                                          <p>True</p>
+                                </div>
+                          </div>
+
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p>Confirmation status:</p>
+                                </div>
+                                <div className='Value'>
+                                          <p>False</p>
+                                </div>
+                          </div>
+
+                          <h3>Church Service</h3>
+
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p><b>Church:</b></p>
+                                </div>
+                                <div className='Value'>
+                                          <p>Linda Holy family Parish</p>
+                                </div>
+                          </div>
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p><b>Time:</b></p>
+                                </div>
+                                <div className='Value'>
+                                          <p>08hrs</p>
+                                </div>
+                          </div>
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p><b>Directions:</b></p>
+                                </div>
+                                <div className='Value'>
+                                          <p>Map</p>
+                                </div>
+                          </div>
+                          <h3>Photo session</h3>
+
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p><b>Venue:</b></p>
+                                </div>
+                                <div className='Value'>
+                                          <p>Munda Wanga Batany and Park</p>
+                                </div>
+                          </div>
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p><b>Time:</b></p>
+                                </div>
+                                <div className='Value'>
+                                          <p>12hrs</p>
+                                </div>
+                          </div>
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p><b>Directions:</b></p>
+                                </div>
+                                <div className='Value'>
+                                          <p>Map</p>
+                                </div>
+                          </div>
+                          <h3>Reception</h3>
+
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p><b>Venue:</b></p>
+                                </div>
+                                <div className='Value'>
+                                          <p>Kuema Event Services</p>
+                                </div>
+                          </div>
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p><b>Time:</b></p>
+                                </div>
+                                <div className='Value'>
+                                          <p>16hrs</p>
+                                </div>
+                          </div>
+                          <div className='container'>
+                                <div className='Metric'>
+                                          <p><b>Directions:</b></p>
+                                </div>
+                                <div className='Value'>
+                                          <p>Map</p>
+                                </div>
+                          </div>
+
+                       
+
+                    </div>
+
+            </div>
+
+         
+
             {cardData &&
                 (cardData.filter(item => item.phone == phone).length > 0 ? (
                   cardData

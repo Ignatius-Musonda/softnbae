@@ -6,6 +6,11 @@ body {
   .App {
     text-align: center;
   }
+
+  *{
+    overflow-x: hidden;
+    
+  }
   
   .hero {
     background: url('../Images/img3.jpg') ;
@@ -62,6 +67,28 @@ body {
     border-radius: 3px;
     cursor: pointer;
    
+  }
+
+
+  .wholerescover{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .resdetails{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgb(215, 212, 212);
+    max-width: 380px;
+    min-width: 380px;
+  }
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
   }
   .resInputsSec button:hover{
 
