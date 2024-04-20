@@ -106,15 +106,15 @@ body {
     justify-content: space-around;
     flex-direction: column;
     background-color: rgb(215, 212, 212);
-    max-width: 350px;
-    min-width: 350px;
+    max-width: 360px;
+    min-width: 360px;
   }
 
   .container{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 10px;
+    padding: 10px 20px;
   }
   .resInputsSec button:hover{
 
