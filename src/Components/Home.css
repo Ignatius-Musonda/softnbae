@@ -106,8 +106,8 @@ body {
     justify-content: space-around;
     flex-direction: column;
     background-color: rgb(215, 212, 212);
-    max-width: 380px;
-    min-width: 380px;
+    max-width: 350px;
+    min-width: 350px;
   }
 
   .container{
