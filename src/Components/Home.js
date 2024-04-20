@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import './Home.css';
 import Footer from './Footer/Footer';
 import useContentful from './Hooks/useContentful';
+import { Link } from 'react-router-dom';
 
 
 function App() {
@@ -94,127 +95,13 @@ function App() {
                             <div className='actualinputs'>
                             <input placeholder='RSVP Code'/> 
                             </div>
-                            <div className='CTA'>
+                            {/* <div className='CTA'>
                                     <button>Search</button>
-                            </div>
+                            </div> */}
                 </div>
             </div>
 
-            <div className='wholerescover'> 
-
-                    <div className='resdetails'>
-
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p>Name:</p>
-                                </div>
-                                <div className='Value'>
-                                          <p>Ignatius Musonda</p>
-                                </div>
-                          </div>
-
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p>Reservation status:</p>
-                                </div>
-                                <div className='Value'>
-                                          <p>True</p>
-                                </div>
-                          </div>
-
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p>Confirmation status:</p>
-                                </div>
-                                <div className='Value'>
-                                          <p>False</p>
-                                </div>
-                          </div>
-
-                          <h3>Church Service</h3>
-
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p><b>Church:</b></p>
-                                </div>
-                                <div className='Value'>
-                                          <p>Linda Holy family Parish</p>
-                                </div>
-                          </div>
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p><b>Time:</b></p>
-                                </div>
-                                <div className='Value'>
-                                          <p>08hrs</p>
-                                </div>
-                          </div>
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p><b>Directions:</b></p>
-                                </div>
-                                <div className='Value'>
-                                          <p>Map</p>
-                                </div>
-                          </div>
-                          <h3>Photo session</h3>
-
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p><b>Venue:</b></p>
-                                </div>
-                                <div className='Value'>
-                                          <p>Munda Wanga Batany and Park</p>
-                                </div>
-                          </div>
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p><b>Time:</b></p>
-                                </div>
-                                <div className='Value'>
-                                          <p>12hrs</p>
-                                </div>
-                          </div>
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p><b>Directions:</b></p>
-                                </div>
-                                <div className='Value'>
-                                          <p>Map</p>
-                                </div>
-                          </div>
-                          <h3>Reception</h3>
-
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p><b>Venue:</b></p>
-                                </div>
-                                <div className='Value'>
-                                          <p>Kuema Event Services</p>
-                                </div>
-                          </div>
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p><b>Time:</b></p>
-                                </div>
-                                <div className='Value'>
-                                          <p>16hrs</p>
-                                </div>
-                          </div>
-                          <div className='container'>
-                                <div className='Metric'>
-                                          <p><b>Directions:</b></p>
-                                </div>
-                                <div className='Value'>
-                                          <p>Map</p>
-                                </div>
-                          </div>
-
-                       
-
-                    </div>
-
-            </div>
+            
 
          
 
@@ -225,13 +112,132 @@ function App() {
                     .map((item, index) => {
                       return (
                         <div key={index}>
-                          <p>somethings</p>
-                          <p>{item?.name}</p>
+                         
+                          
+                                <div className='wholerescover'> 
+
+                                    <div className='resdetails'>
+
+                                          <h2>Reservation Details</h2>
+
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Name:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                        <p>{item?.name}</p>
+                                                </div>
+                                          </div>
+
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Reservation status:</b></p>
+                                                </div>
+                                                <div className={item?.reservation ? "TValue": "FValue"}>
+                                                      <p>{item?.reservation ? 'Confirmed' : 'Pending'}</p>
+                                                </div>
+                                          </div>
+
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Confirmation status:</b></p>
+                                                </div>
+                                                <div className={item?.confirmation ? "TValue": "FValue"}>
+                                                {/* <p>Reservation: {fields.reservation ? 'Yes' : 'No'}</p> */}
+                                                 <p>{item.confirmation ? 'Confirmed' : 'Pending'}</p>
+                                                </div>
+                                          </div>
+
+                                          <h3>Church Service</h3>
+
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Church:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                          <p>Linda Holy family Parish</p>
+                                                </div>
+                                          </div>
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Time:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                          <p>08hrs</p>
+                                                </div>
+                                          </div>
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Directions:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                     <p><Link className='linkitem' to={'https://maps.app.goo.gl/8wL7zZHiNiNCQpc78'}>Click Me!</Link></p>
+                                                </div>
+                                          </div>
+                                          <h3>Photo session</h3>
+
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Venue:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                          <p>Munda Wanga Botany and Park</p>
+                                                </div>
+                                          </div>
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Time:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                          <p>12:00 AM</p>
+                                                </div>
+                                          </div>
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Directions:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                          <p><Link className='linkitem' to={'https://g.co/kgs/vVKVdtV'}>Click Me!</Link></p>
+                                                </div>
+                                          </div>
+                                          <h3>Reception</h3>
+
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Venue:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                          <p>Kuema Event Services</p>
+                                                </div>
+                                          </div>
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Time:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                          <p>16hrs</p>
+                                                </div>
+                                          </div>
+                                          <div className='container'>
+                                                <div className='Metric'>
+                                                          <p><b>Directions:</b></p>
+                                                </div>
+                                                <div className='Value'>
+                                                       <p><Link className='linkitem' to={'https://g.co/kgs/qDLgsfc'}>Click Me!</Link></p>
+                                                </div>
+                                          </div>
+
+                                      
+
+                                    </div>
+
+                            </div>
+                        
                         </div>
                       );
                     })
                 ) : (
-                  <p>No records found</p>
+                  <p className='FValue'>No reservation found</p>
                 ))}
 
 
@@ -246,7 +252,7 @@ function App() {
 
 
 
-        <p>RSVP section goes here.</p>
+        {/* <p>RSVP section goes here.</p> */}
       </section>
 
       <section className="content" id="proposal">
@@ -275,7 +281,7 @@ function App() {
       </section>
       <section className="content" id="locations">
         <h2>Locations</h2>
-        <p>Details about wedding locations.</p>
+        <p><b>Check Under reservation.</b></p>
       </section>
 
       <Footer/>

@@ -11,6 +11,11 @@ body {
     overflow-x: hidden;
     
   }
+
+  .linkitem{
+    text-decoration: none;
+    color: blue;
+  }
   
   .hero {
     background: url('../Images/img3.jpg') ;
@@ -23,6 +28,15 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
+    font-family: "Parisienne", cursive;
+    font-size: 30px;
+
+    /* .parisienne-regular {
+      font-family: "Parisienne", cursive;
+      font-weight: 400;
+      font-style: normal;
+    } */
+    
   }
   
   nav {
@@ -95,6 +109,18 @@ body {
     background-color: black;
     color: white;
   }
+
+  .TValue  {
+    color: green;
+   
+    font-weight:bold;
+
+  }
+  .FValue {
+    color: red;
+    font-weight:bold;
+
+  }
   
   nav .nav-left {
     float: left;
@@ -121,6 +147,7 @@ body {
   }
 
   .Names{
+    font-family: "Parisienne", cursive;
     font-size: 30px;
   }
 
@@ -129,6 +156,11 @@ body {
     display: flex;
     justify-content: space-around;
     /* background-color: red; */
+  }
+
+  .content h2{
+    font-family: "Parisienne", cursive;
+    font-size: 25px;
   }
 
  

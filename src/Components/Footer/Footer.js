@@ -25,7 +25,7 @@ const Footer = () => {
                         </div>
                    </div>
                    <div className="rowPart">
-                        <p>2023 © Alconnect Beauty. All Rights Reserved.</p>
+                        <p>2024 © Nerdarr Innovate. All Rights Reserved.</p>
                    </div>
                 
              </div>
