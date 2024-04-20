@@ -1,0 +1,375 @@
+
+
+*{
+    box-sizing: border-box;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    overflow-x: hidden;
+}
+
+.linkItem{
+    text-decoration: none;
+    color: black;
+    /* color: white; */
+}
+.scrollCover .linkItem{
+    text-decoration: none;
+    /* color: black; */
+    color: #000;
+}
+
+/* .linkItem:hover{
+   border-bottom: 1px solid gold;
+} */
+
+
+.NavWhole{
+    /* display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    padding: 10px 30px;
+    align-items: center; */
+   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-weight: 700;
+    background-color: initial;
+    color: black;
+    /* background-color: #f7f7f7; */
+    /* line-height: 1rem; */
+
+}
+.fontawesomIcons{
+    font-size: 1.5rem;
+}
+/* .resNav{
+    display: none;
+} */
+
+.logo{
+    font-family: "Parisienne", cursive;
+}
+
+.scrollCover{ 
+ 
+    
+    position: fixed;
+    padding: 0;
+    margin-left: 15px;
+    margin-right: 30px;
+    font-size: 12px;
+    line-height: 1.9rem;
+    overflow: hidden;
+    border-radius: 15px;
+    /* height: 80px; */
+
+    top: 5px;
+    left: 0;
+    width: 100%;
+    z-index: 5; 
+    
+
+    
+}
+
+.resNav{
+    display: none;
+}
+.scrollCover button{ 
+ 
+    
+  border: none;
+  background-color: inherit;
+
+    
+}
+
+.scrollCover .listItems{
+
+    background-color: #f7f7f7;
+    margin-right: 30px;
+    border-radius: 15px;
+    /* color: #000; */
+    /* background-color: green; */
+}
+
+.listItems ul{
+
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    /* flex: 1; */
+    /* justify-content: space-between; */
+    /* padding: 10px 0px; */
+    align-items: center;
+    /* background-color: red; */
+
+}
+
+.toggle .fontawesomIcons{
+    font-size: 1.3rem;
+    /* color: red; */
+}
+.resNav img{
+    margin: 5px 0;
+    width: 100%;
+    /* height: 50px; */
+    object-fit: cover;
+}
+
+.listItems{
+
+    display: flex;
+    padding: 5px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listItems img{
+    margin: 3px 0;
+    width: 100%;
+    /* max-width: 60px; */
+    height: 70px;
+    object-fit: cover;
+}
+.listItems li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    cursor: pointer;
+    /* color: #000; */
+
+}
+.listItems .secItem li{
+  margin-right: 20px;
+  font-size: 1.1rem;
+
+}
+
+.listItems .buttons button{
+    min-width: 150px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropView{
+    /* display: flex;
+    background-color: red;
+    margin-left: 5px; */
+    position: absolute;
+    margin-left: 30px;
+   width: 100%;
+   padding-right: 30px;
+   
+
+}
+.noDrop{
+    display: none;
+}
+
+.SecResDrop{
+    display: none;
+}
+
+.NavWhole .dropCover{
+    display: flex;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-evenly;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 30px;
+    color: black;
+    margin-right: 30px;
+    margin-top: 10px;
+   
+    border-radius: 15px;
+    background-color: #f7f7f7;
+
+}
+.NavWhole .dropCover li{
+   cursor: pointer;
+
+}
+.scrollCover .dropCover{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 45px;
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+
+}
+.dropView ul{
+
+    
+    list-style: none;
+    padding: 0 10px;
+    /* margin-right: 60px; */
+    /* margin: auto; */
+   
+}
+.dropView li{
+    cursor: pointer;
+   margin: 0;
+   padding: 0;
+   
+}
+
+.secDropCover{
+    display: none;
+}
+
+
+@media screen and (max-width: 730px){   
+
+
+
+    .scrollCover{
+        width: 100%;
+    }
+    .scrollCover .NavWhole{
+        display: none;
+    }
+    .NavWhole .resNav{
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        padding-left: 10px;
+       
+        /* background-color: white; */
+        justify-content: space-between;
+    }
+
+    .NavWhole .listItems{
+     display: none;
+    }
+    .scrollCover .listItems{
+     display: none;
+    }
+
+
+    .scrollCover .resNav{
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        margin-right: 30px;
+        border-radius: 15px;
+        background-color: white;
+        justify-content: space-between;
+    }
+   
+    .scrollCover .resNav .toggle{
+       margin-right: 40px;
+    }
+
+    .scrollCover.fontawesomIcons{
+        /* padding: 100px; */
+        margin: 0;
+        background-color: antiquewhite;
+        z-index: 40;
+        /* padding: ; */
+    }
+    /* .toggle{
+        margin: 0;
+        padding: 0;
+        background-color: blueviolet;
+    } */
+    .scrollCover ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: green; */
+        /* background-color: red;
+        justify-content: flex-start; */
+    }
+    .scrollCover li{
+        margin: 0;
+        padding: 0;
+        /* background-color: yellow; */
+    }
+
+    .scrollCover .listItems{
+        /* margin: 0;
+        padding: 0;
+        background-color: blue; */
+    }
+
+    .listItems .serviceItem{
+        display: none;
+    }
+    .listItems .buttons{
+        display: none;
+    }
+    .listItems button{
+        display: none;
+    }
+
+    .dropView{
+        display: none;
+    }
+
+    .SecResDrop{
+
+        display: block;
+        margin-top: 5px;
+        margin-left: 15px;
+        /* background-color: purple; */
+        /* color: black;
+        display: flex;
+        background-color: #f7f7f7;
+        border-radius: 15px; */
+    }
+    .scrollCover .SecResDrop{
+
+        display: block;
+        margin-left: 1px;
+        /* background-color: blueviolet; */
+        /* background-color: purple; */
+        /* color: black;
+        display: flex;
+        background-color: #f7f7f7;
+        border-radius: 15px; */
+    }
+    .SecResDrop ul{
+
+       margin: 20px 0;
+       padding: 0;
+       min-height: 300px;
+        width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       flex-direction: column;
+
+       /* background-color: aqua; */
+    }
+    .SecResDrop li{
+       
+        margin: 0;
+        padding: 0;
+    }
+    .secDropCover{
+        color: black;
+        margin-right: 30px;
+        display: flex;
+        background-color: #f7f7f7;
+        border-radius: 15px;
+    }
+    .secDropCover button{
+        border: .1px solid #003300;
+        color: black;
+        font-size: 1rem;
+        padding: 12px 36px;
+        border-radius: 3px;
+    }
+
+    .noSecDrop{
+        display: none;
+        
+    }
+
+   
+    
+}

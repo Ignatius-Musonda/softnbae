@@ -28,6 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
+    /* color: black; */
     font-family: "Parisienne", cursive;
     font-size: 30px;
 
@@ -37,6 +38,17 @@ body {
       font-style: normal;
     } */
     
+  }
+
+  .hero button{
+
+    border: none;
+    padding: 20px 100px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    font-size: 20px;
   }
   
   nav {
@@ -170,6 +182,7 @@ body {
     max-width: 770px;
     width: 100%;
     text-align: center;
+    padding: 0 10px;
     /* background-color: red; */
   }
   

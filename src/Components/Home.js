@@ -3,6 +3,11 @@ import './Home.css';
 import Footer from './Footer/Footer';
 import useContentful from './Hooks/useContentful';
 import { Link } from 'react-router-dom';
+//import ics from 'ics'; // Import the ics package
+import {createEvent} from 'ics';
+import NavBar from './NavBar/NavBar';
+// const ics = require('ics')
+
 
 
 function App() {
@@ -16,6 +21,88 @@ function App() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+
+
+  const newEvent = {
+    BEGIN: 'VCALENDAR',
+    PRODID: 'www.website.com',
+    UID: 'info@website.com',
+    CATEGORIES: 'APPOINTMENT',
+    DTSTART: '20140321T153010Z',
+    DTEND: '',
+    SUMMARY: 'My great event',
+    DESCRIPTION: 'Great event in your town',
+    END: 'VCALENDAR',
+  };
+
+  const formatDate = (dateString) => {
+    return dateString.replace(/(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})/, "$1-$2-$3T$4:$5:$6");
+  };
+
+  // const handleDownloadCalendar = () => {
+    
+  //   let formattedDate = formatDate(newEvent.DTSTART);
+  //   let cal = ics();
+  //   cal.addEvent({
+  //     start: formattedDate,
+  //     end: formattedDate,
+  //     title: newEvent.SUMMARY,
+  //     description: newEvent.DESCRIPTION,
+  //     location: '',
+  //   });
+
+  //   cal.download('my_calendar');
+  // };
+
+  /////
+
+  const event = {
+
+        start: [2018, 5, 30, 6, 30],
+        duration: { hours: 6, minutes: 30 },
+        title: 'Bolder Boulder',
+        description: 'Annual 10-kilometer run in Boulder, Colorado',
+        location: 'Folsom Field, University of Colorado (finish line)',
+        url: 'http://www.bolderboulder.com/',
+        geo: { lat: 40.0095, lon: 105.2669 },
+        categories: ['10k races', 'Memorial Day Weekend', 'Boulder CO'],
+        status: 'CONFIRMED',
+        busyStatus: 'BUSY',
+        organizer: { name: 'Admin', email: 'Race@BolderBOULDER.com' },
+    
+  }
+  
+  async function handleDownload() {
+    console.log("i am here")
+    const filename = 'ExampleEvent.ics'
+    const file = await new Promise((resolve, reject) => {
+      createEvent(event, (error, value) => {
+        if (error) {
+          reject(error)
+        }
+  
+        resolve(new File([value], filename, { type: 'text/calendar' }))
+      })
+    })
+    const url = URL.createObjectURL(file);
+  
+    // trying to assign the file URL to a window could cause cross-site
+    // issues so this is a workaround using HTML5
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = filename;
+  
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  
+    URL.revokeObjectURL(url);
+  }
+
+  /////
+
+  
 
   const scrollToSection = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
@@ -37,7 +124,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav className={isOpen ? 'nav-open' : ''}>
+      {/* <nav className={isOpen ? 'nav-open' : ''}>
         <div className="nav-left">
           <span onClick={() => scrollToSection('intro')}>I</span>
           <span onClick={() => scrollToSection('proposal')}>P</span>
@@ -52,10 +139,12 @@ function App() {
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
-      </nav>
+      </nav> */}
+
+      <NavBar/>
       <div className="hero" id="intro">
         <h1>Ignatius & Patience</h1>
-        <p>Save the Date</p>
+              <button onClick={() => scrollToSection('rsvp')}>RESERVATIONS</button>
         {/* rrr */}
       </div>
       <section className="content" id="rsvp">
@@ -255,12 +344,24 @@ function App() {
         {/* <p>RSVP section goes here.</p> */}
       </section>
 
+      <section className="content" id="how-we-met">
+        <h2>How We Met</h2>
+        <div className='paraCover'> 
+              <div className='paragraph'>
+                  <p><b>[Officially atleast😁]</b>The year is 2019, Back from a Heart of Worship CBU choir trip from Ndeke, Patience sat at a window seat, Ignatius a callapsable bus passageway seat. At some point next to eachother Ignatius charmingly said Hi to Patience and told her he'd been studying her for months, knew her favorite color, dress, best friend and what makes her happy, she shocked at the confidence & humour, smiled with a blushed up look, rest is <b>4th of May 😉</b></p>
+              </div>
+
+        </div>
+           
+       
+      </section>
+
       <section className="content" id="proposal">
         <h2>Proposal</h2>
         <div className='paraCover'>
 
         <div className='paragraph'>
-             <p>Hanna & Caleb planned their first trip to Japan together in March 2017. Caleb planned a romantic picnic in Nogawa park and popped the question under the beautiful cherry blossom trees. Hanna gave a big smile and said yes! They celebrated with Hanna’s family and friends that night with a champagne toast..</p>
+             <p>On August 4th, 2023, Ignatius planned a 'Post-Graduation Dinner' for Patience at a lodge in Kitwe. Unbeknownst to Patience, it was no ordinary meal. As they approached their table, she noticed the romantic decor, candles, and heard soft, romantic Sax music playing. In the midst of it all was a message stand with the words 'Patience, will you marry me?' Patience was in serious shock almost disappeared but eventually caught up with the moment. To her surprise, most of their friends were there. She said yes!</p>
         </div>
 
       </div>
@@ -268,20 +369,10 @@ function App() {
         
       </section>
     
-      <section className="content" id="how-we-met">
-        <h2>How We Met</h2>
-        <div className='paraCover'> 
-              <div className='paragraph'>
-                  <p>This section can be used for taking your guests for a ride down memory lane and give them some insight into your journey so far. If you've been together for a while, some guests may have no idea how you two got together! Recounting your story is a fun way to share those hilarious, heartfelt and unique moments that have define who you are as a couple. Stories you might want to share are how you met, your first date, your proposal story, and any other defining and memorable moments in your relationship.</p>
-              </div>
-
-        </div>
-           
-       
-      </section>
+      
       <section className="content" id="locations">
         <h2>Locations</h2>
-        <p><b>Check Under reservation.</b></p>
+        <p><b>Check Under <span onClick={() => scrollToSection('locations')}>Reservations</span>.</b></p>
       </section>
 
       <Footer/>
