@@ -153,7 +153,16 @@ body {
     cursor: pointer;
     color: #fff;
   }
-  
+
+  .laodersSearch{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .innerload{
+
+  }
   nav .nav-toggle {
     display: none;
   }

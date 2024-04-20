@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import './Home.css';
+import BounceLoader from "react-spinners/BounceLoader";
 import Footer from './Footer/Footer';
 import useContentful from './Hooks/useContentful';
 import { Link } from 'react-router-dom';
@@ -15,6 +16,7 @@ function App() {
   const [viz,setViz] = useState(false);
   const [phone,setPhone] = useState();
   const [cardData, setCardData] = useState()
+  const [searching, setSearching] = useState(false);
 
   const {getAuthors} = useContentful()
 
@@ -177,18 +179,44 @@ function App() {
 
 
                             <div className='actualinputs'>
-                            <input onChange={(e)=>{setPhone(e.target.value)
+                            <input onChange={(e)=>{setPhone(e.target.value) 
+
+                                   setSearching(true);
+
+                                  // Here you can add your code to perform the search or any other action
+
+                                  // For demonstration purposes, let's simulate a delay
+                                  setTimeout(() => {
+                                      // Hide the searching message after some time (simulated delay)
+                                      setSearching(false);
+                                  }, 2000); // Change 2000 to the desired delay in millisecond
+
+
                               console.log("phone",phone)
                             }} value={phone} placeholder='Phone number'/> 
                             </div>
                             <div className='actualinputs'>
                             <input placeholder='RSVP Code'/> 
                             </div>
+
+                            {/* Display the searching message if searching state is true */}
+
+                           
                             {/* <div className='CTA'>
                                     <button>Search</button>
                             </div> */}
                 </div>
-            </div>
+                        
+          
+            </div>  
+
+
+            <div className='laodersSearch'>
+                            <div className='innerload'>
+                            {searching && <><p></p><BounceLoader/></>}
+                            </div>
+                            
+                        </div>
 
             
 
@@ -326,7 +354,8 @@ function App() {
                       );
                     })
                 ) : (
-                  <p className='FValue'>No reservation found</p>
+                  <p className='FValue'>{phone.length > 0 ? (searching ? "" : "No reservation found") : ""}</p>
+
                 ))}
 
 
