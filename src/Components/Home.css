@@ -29,7 +29,8 @@ body {
     align-items: center;
     color: #fff;
     /* color: black; */
-    font-family: "Parisienne", cursive;
+    /* font-family: "Parisienne", cursive; */
+    font-family: "Great Vibes", cursive;
     font-size: 30px;
 
     /* .parisienne-regular {
@@ -62,6 +63,7 @@ body {
     background-color: green;
     border-radius: 5px;
     cursor: pointer;
+    color: white;
 
   }
 
@@ -168,7 +170,8 @@ body {
   }
 
   .Names{
-    font-family: "Parisienne", cursive;
+    /* font-family: "Parisienne", cursive; */
+    font-family: "Great Vibes", cursive;
     font-size: 30px;
   }
 
@@ -180,7 +183,8 @@ body {
   }
 
   .content h2{
-    font-family: "Parisienne", cursive;
+    /* font-family: "Parisienne", cursive; */
+    font-family: "Great Vibes", cursive;
     font-size: 25px;
   }
 

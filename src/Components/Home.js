@@ -223,7 +223,7 @@ function App() {
          
 
             {cardData &&
-                (cardData.filter(item => item.phone == phone).length > 0 ? (
+                (cardData.filter(item => item.phone == phone?.length > 0 )? (
                   cardData
                     .filter(item => item.phone == phone)
                     .map((item, index) => {
