@@ -223,7 +223,7 @@ function App() {
          
 
             {cardData &&
-                (cardData.filter(item => item.phone == phone?.length > 0 )? (
+                (cardData.filter(item => item.phone == phone?.length > 0 && item.phone == phone )? (
                   cardData
                     .filter(item => item.phone == phone)
                     .map((item, index) => {
@@ -260,7 +260,7 @@ function App() {
                                                           <p><b>Confirmation status:</b></p>
                                                 </div>
                                                 <div className={item?.confirmation ? "TValue": "FValue"}>
-                                                {/* <p>Reservation: {fields.reservation ? 'Yes' : 'No'}</p> */}
+                                               
                                                  <p>{item.confirmation ? 'Confirmed' : 'Pending'}</p>
                                                 </div>
                                           </div>
@@ -355,15 +355,19 @@ function App() {
                     })
                 ) : (
                   <p className='FValue'>{phone?.length > 0 ? (searching ? "" : "No reservation found") : ""}</p>
+                
+                  
+
 
                 ))}
+
 
 
         
            </>
         }
        
-       
+       <p className='FValue'>{phone?.length > 0 ? (searching ? "" : "No reservation found") : ""}</p>
        
 
         
