@@ -280,7 +280,7 @@ function App() {
                                                           <p><b>Time:</b></p>
                                                 </div>
                                                 <div className='Value'>
-                                                          <p>08hrs</p>
+                                                          <p>09hrs</p>
                                                 </div>
                                           </div>
                                           <div className='container'>
@@ -332,7 +332,7 @@ function App() {
                                                           <p><b>Time:</b></p>
                                                 </div>
                                                 <div className='Value'>
-                                                          <p>16hrs</p>
+                                                          <p>15hrs</p>
                                                 </div>
                                           </div>
                                           <div className='container'>
